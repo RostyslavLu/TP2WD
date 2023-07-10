@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: auto;
+  background: rgb(150, 159, 165);
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+}
+
+
+main {
+  text-align: center;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+table.listing {
+  border-spacing: 0px;
+  width: 80%;
+  border: 1px solid grey;
+}
+
+table.listing th,
+table.listing td {
+  border: 1px solid grey;
+  height: 30px;
+  padding: 5px;
+}
+
+
+input,
+select, label, textarea {
+  padding: 6px;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+
+}
+input[type="submit"]:hover {
+  background-color: rgb(255, 136, 0);
+}
+.newmessage {
+  align-self: flex-end;
+}
+
+.createmessage {
+  text-align: left;
+  max-width: 500px;
+}
+
+.createmessage > input, .createmessage > textarea {
+  width: 100%;
+}
+
+form>div {
+  text-align: right;
+}
+
+nav ul {
+  padding: 0 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  background: rgb(255, 136, 0);
+}
+
+nav ul a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+nav ul a:hover {
+  background: rgb(150, 159, 165);
+  color: rgb(0, 0, 0);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 20px;
+  
+}
+
+header > div {
+  padding: 10px;
+}
+
+header > div > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+header > div > a:hover {
+  color: rgb(238, 45, 11);
+  
+}
+/* article */
+section {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 30px 1fr 30px;
+  gap: 10px;
+  max-width: 800px;
+}
+
+section > header {
+  display: grid;
+  grid-template-columns: 1fr 200px 200px;
+  padding: 5px;
+
+}
+
+section > header > div:first-child {
+  margin-right: auto;
+}
+section > article {
+  border: 1px solid rgba(0, 0, 0, 0.459);
+  padding: 10px;
+  text-align: left;
+}
+section > article > * {
+  margin-bottom: 10px;
+}
+
+section > div {
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  gap: 10px;
+}
+section > div > a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  background-color: rgb(150, 159, 165);
+  border: 1px solid black;
+}
+section > div > a:hover {
+  background-color: rgb(255, 136, 0);
+}
+
+input[name="id"] {
+  display: none;
+} 
+
+.message_footer input{
+  margin: 0;
+}
+
+.new_messege > article {
+  display: block;
+  text-align: left;
+  padding: 10px;
+}
+
+.new_messege input[type="text"] {
+  min-width: 400px;
+  
+}
+
+.new_messege textarea {
+  width: 100%;
+  height: 100%;
+}
+
+.new_messege input[type="button"] {
+  margin-right: 0;
+}
