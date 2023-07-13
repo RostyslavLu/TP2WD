@@ -3,8 +3,6 @@
 function message_controller_index() {
     require_once(MODEL_DIR.'/message.php');
     $data = message_model_list();
-    //return print_r($data);
-    //http://localhost:7080/2395286/MVC/index.php?module=message&action=index
     render(VIEW_DIR.'/message/select.php', $data);
 
 }
