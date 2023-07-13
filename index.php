@@ -6,14 +6,8 @@ $module = isset($_REQUEST['module'])? safe($_REQUEST['module']) : $config['defau
 
 $action = isset($_REQUEST['action'])? safe($_REQUEST['action']) : $config['default_action'];
 
-///index.php?module=user&action=create
-
-//echo $module;
-//echo '<br>';
-//echo $action;
-
 $controller_file = 'controllers/'.ucfirst($module).'Controller.php';
-//echo $controller_file;
+
 if (!file_exists($controller_file)) {
     trigger_error('Invalid Controller');
     exit;
@@ -21,7 +15,6 @@ if (!file_exists($controller_file)) {
 require_once($controller_file);
 
 $function = strtolower($module).'_controller_'.$action;
-//echo $function;
 if (!function_exists($function)) {
     trigger_error('Invalide Controller Action');
     exit;
