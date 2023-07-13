@@ -3,16 +3,13 @@
 function user_model_index() {
     
     require(CONNEX_DIR);
-    //print_r($request);
-
     render(VIEW_DIR.'/user/login.php');
 }
 
 function user_model_login($request) {
     
     require_once(CONNEX_DIR);
-    
-    //print_r($request); //зчитані дані з інпут
+
     $userlog = $request['username'];
     $userpass = $request['password'];
 
@@ -22,10 +19,10 @@ function user_model_login($request) {
     $count = mysqli_num_rows($result);
 
     if ($count == 1) {
-        //check pasword
+
         $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $dbPassword = $user['password'];
-        //
+
         if (password_verify($userpass, $dbPassword)) {
             session_start();
             session_regenerate_id();
@@ -36,7 +33,6 @@ function user_model_login($request) {
             $salt = 'gfdg/$%';
             $_SESSION['finger_print'] = md5($_SERVER['HTTP_USER_AGENT'].$_SERVER['REMOTE_ADDR'].$salt);
             
-
             render(VIEW_DIR.'/user/auth.php');
     
         } else {
